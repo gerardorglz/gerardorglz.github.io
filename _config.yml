@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "Homepage"
 title_separator          : "-"
-name                     : &name "Luis Gerardo Ruiz Gonzalez"
+name                     : &name "Gerardo Ruiz"
 description              : &description "personal description"
 url                      : https://gerardorglz.github.io/gerardoruizg/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,13 +23,14 @@ repository               : "gerardorglz/gerardoruizg"
 author:
   # Biographic information
   avatar           : "IMG_3165.jpg"
-  name             : "Gerardo Ruiz"
+  name             : "Luis Gerardo Ruiz González"
+  short_name       : "Gerardo Ruiz"
   pronouns         : "He/him"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "Hey there! I'm Gerardo Ruiz, an 8th semester student of Economics at UNAM."
   location         : "Ciudad de México, Méxcio"
   employer         : "IIEc-UNAM"
   uri              : # URL
-  email            : "gerardorg2203@gmail.com" 
+  gerardorg2203@gmail.com            : "gerardorg2203@gmail.com" 
 
   # Academic websites
   academia         : # URL
