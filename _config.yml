@@ -22,14 +22,14 @@ repository               : "gerardorglz/gerardoruizg"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
+  avatar           : "IMG_3165.jpg"
+  name             : "Gerardo Ruiz"
+  pronouns         : "He/him"  
   bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  location         : "Ciudad de México, Méxcio"
+  employer         : "IIEc-UNAM"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "gerardorg2203@gmail.com" 
 
   # Academic websites
   academia         : # URL
