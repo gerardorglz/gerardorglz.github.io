@@ -23,23 +23,22 @@ repository               : "gerardorglz/gerardoruizg"
 author:
   # Biographic information
   avatar           : "IMG_3165.jpg"
-  name             : "Luis Gerardo Ruiz González"
-  short_name       : "Gerardo Ruiz"
+  name             : "Gerardo Ruiz"
   pronouns         : "He/him"  
-  bio              : "Hey there! I'm Gerardo Ruiz, an 8th semester student of Economics at UNAM."
+  bio              : "Hey there! I’m Gerardo Ruiz, an eighth-semester Economics student at UNAM currently working at IIEc-UNAM."
   location         : "Ciudad de México, Méxcio"
   employer         : "IIEc-UNAM"
   uri              : # URL
-  gerardorg2203@gmail.com            : "gerardorg2203@gmail.com" 
+  email            : "gerardorg2203@gmail.com" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : # "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : # "http://orcid.org/yourorcidurl"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
   scopus           : # URL
 
@@ -47,7 +46,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "https://github.com/gerardorglz"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
