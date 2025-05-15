@@ -1,14 +1,14 @@
 ---
-title: "Prueba 123"
+title: "Ecos kaleckianos en Tavares: dinámica capitalista, crecimiento desequilibrado y financiamiento en la periferia"
 collection: publications
 category: manuscripts
 permalink: /publications/2009-10-01-paper-title-number-1
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
+date: 2025
 venue: 'Journal 1'
-slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-bibtexurl: 'http://academicpages.github.io/files/bibtex1.bib'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+slidesurl: ''
+paperurl: ''
+bibtexurl: ''
+citation: ''
 ---
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+The text examines Michal Kalecki's influence on Maria da Conceição Tavares's analysis of Latin American development in the 1970s. It highlights four key areas: effective demand, business cycles, intersectoral dynamics, and the role of investment financing. The latter is emphasized as a crucial yet understudied aspect.
