@@ -1,1 +1,1 @@
-Hola! Este es el código para mi página web. Es de libre uso.
+Hola! Este es el código para mi página web. Es de uso libre.
