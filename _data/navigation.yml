@@ -12,14 +12,14 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Courses & Workshops"
-    url: /courses & workshops/
+#  - title: "Courses & Workshops"
+#    url: /courses & workshops/
 
 #  - title: "Talks"
 #    url: /talks/    
 
-#  - title: "Teaching"
-#    url: /teaching/    
+  - title: "Courses & Workshops"
+    url: /teaching/    
     
 #  - title: "Portfolio"
 #    url: /portfolio/
