@@ -1,11 +1,12 @@
 ---
-title: "Undergraduate - Time Series Analysis"
+title: "Time Series Analysis"
 collection: teaching
-type: "Benjamín Oliva Vázquez, MSc"
+type: "Undergraduate course"
 permalink: /teaching/2014-spring-teaching-1
 venue: "UNAM, Facultad de Economía"
 date: 2025-08-01
 location: "Mexico City, Mexico"
+instructo: Benjamín Oliva Vázquez, MSc
 link: https://benjov.github.io/Series-Tiempo/index.html
 ---
 
