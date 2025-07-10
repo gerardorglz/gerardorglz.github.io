@@ -10,5 +10,4 @@ link: https://benjov.github.io/Series-Tiempo/index.html
 ---
 
 Benjamín Oliva Vázquez, MSc
-
 Contributed to the development of course content, focusing on the identification of structural shocks in VAR models, Kalman Filter and the introduction to nonlinear models such as Threshold-VAR (TVAR).
