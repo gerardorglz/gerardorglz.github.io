@@ -1,20 +1,12 @@
 ---
-title: "Teaching experience 1"
+title: "Time Series Analysis"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+venue: "UNAM, Facultad de Economía"
+date: 2025-08-01
+location: "Mexico City, Mexico"
+link: https://benjov.github.io/Series-Tiempo/index.html
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
+Contributed to the development of course content, focusing on the identification of structural shocks in VAR models, Kalman Filter and the introduction to nonlinear models such as Threshold-VAR (TVAR).
