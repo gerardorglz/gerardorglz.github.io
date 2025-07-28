@@ -1,0 +1,14 @@
+# _data/galeria.yml
+# Puedes repetir "name" para varias fotos de la misma persona/categoría
+- name: Ana
+  src: /images/galeria/ana_1.jpg
+  alt: Ana en sesión 1
+- name: Ana
+  src: /images/galeria/ana_2.jpg
+  alt: Ana en sesión 2
+- name: Luis
+  src: /images/galeria/luis_1.jpg
+  alt: Luis retrato
+- name: Carla
+  src: /images/galeria/carla_1.jpg
+  alt: Carla backstage
