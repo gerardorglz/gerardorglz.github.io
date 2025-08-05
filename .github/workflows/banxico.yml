@@ -2,7 +2,7 @@ name: Update Banxico charts (MP4)
 
 on:
   schedule:
-    - cron: "0 18 * * *"   # 18:00 UTC = 12:00 CDMX
+    - cron: "0 18 10 * *"   # 18:00 UTC = 12:00 CDMX, el día 10 de cada mes
   workflow_dispatch: {}
   push:
     paths:
