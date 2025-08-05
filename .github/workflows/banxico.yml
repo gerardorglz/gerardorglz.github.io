@@ -1,0 +1,43 @@
+name: Update Banxico charts (MP4)
+
+on:
+  schedule:
+    - cron: "0 18 * * *"   # 18:00 UTC = 12:00 CDMX
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "scripts/banxico_chart.py"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install system deps (ffmpeg for MP4)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install banxicoapi pandas matplotlib
+
+      - name: Build charts (PNG + MP4)
+        env:
+          BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}
+        run: python scripts/banxico_chart.py
+
+      - name: Commit artifacts
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add assets/img/banxico/*.png assets/video/banxico/*.mp4
+          git commit -m "Update Banxico MP4 & PNG [skip ci]" || echo "No changes"
+          git push

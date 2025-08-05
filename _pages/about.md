@@ -12,3 +12,16 @@ My name is Gerardo, and I'm currently in the ninth semester of the BSc in Econom
 I am currently working on my undergraduate thesis under the supervision of PhD Juan Carlos Moreno-Brid, focusing on the Macroecomic effects of the Energy Transition. I am particularly interested in the dynamics of Economic Growth and the Energy Transition. My work also draws on Macroeconomics and Monetary Policy, using empirical tools such as Time Series Analysis and Causal Inference.
 
 I love music production and listening to music, especially R&B and Hip-Hop. I’m also really into sports like soccer, football, basketball, and padel. I'm the proud dad of Spike, a Rat Terrier who loves pizza and chicken. I enjoy understanding how things work—especially the universe.
+
+<figure class="align-center" style="margin-top:1.5rem">
+  <img src="/assets/img/banxico/inflacion_vs_tasa.png"
+       alt="Inflación anual vs CETES 28 días (Banxico)" loading="lazy"
+       style="max-width:100%;height:auto">
+  <figcaption>Inflación anual vs CETES 28 días (Banxico). Actualizado diariamente ~12:00 CDMX.</figcaption>
+</figure>
+
+<video controls preload="metadata" style="max-width:100%;height:auto"
+       poster="/assets/img/banxico/inflacion_vs_tasa.png">
+  <source src="/assets/video/banxico/inflacion_vs_tasa.mp4" type="video/mp4">
+  Tu navegador no soporta video HTML5. Puedes ver la imagen de arriba.
+</video>
