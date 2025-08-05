@@ -1,8 +1,7 @@
 <!-- _includes/gh-repo-cards.html -->
 <div id="gh-repos" class="gh-repos"
      data-username="{{ include.username | default: site.github.owner_name | default: 'gerardorglz' }}"
-     data-count="{{ include.count | default: 6 }}"
-     data-pinned="{{ include.pinned | default: '' }}">
+     data-count="{{ include.count | default: 8 }}">
 </div>
 
 <style>
@@ -15,81 +14,69 @@
 .gh-repos .gh-meta{display:flex;gap:12px;align-items:center;font-size:.9rem;color:#57606a}
 .gh-repos .gh-lang{display:flex;align-items:center;gap:6px}
 .gh-repos .gh-lang-dot{width:10px;height:10px;border-radius:50%}
-.gh-repos svg{width:14px;height:14px;vertical-align:-2px;fill:currentColor}
+@media (prefers-color-scheme: dark){
+  .gh-repos .gh-card{background:#0d1117;border-color:#30363d}
+  .gh-repos .gh-desc,.gh-repos .gh-meta{color:#c9d1d9}
+}
 </style>
 
 <script>
 (async () => {
   const wrap = document.getElementById('gh-repos');
   const username = (wrap?.dataset.username || 'gerardorglz').trim();
-  const max = parseInt(wrap?.dataset.count || '6', 10);
-  const pinned = (wrap?.dataset.pinned || '')
-    .split(',').map(s => s.trim()).filter(Boolean);
-
+  const max = parseInt(wrap?.dataset.count || '8', 10);
   const url = `https://api.github.com/users/${username}/repos?per_page=100&sort=updated`;
-  const res = await fetch(url, {
-    headers: {
-      'Accept': 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28'
-    }
-  });
-  if (!res.ok) {
-    wrap.innerHTML = `<p>No pude cargar los repos ahora (status ${res.status}).</p>`;
-    return;
-  }
-  let repos = await res.json();
+  try {
+    const res = await fetch(url, {
+      headers: {
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28'
+      }
+    });
+    if (!res.ok) throw new Error(String(res.status));
+    let repos = await res.json();
 
-  // filtra forks y el repo del sitio
-  repos = repos.filter(r => !r.fork && r.name !== `${username}.github.io`);
+    // Oculta forks, el repo del sitio y archivados
+    repos = repos.filter(r => !r.fork && !r.archived && r.name !== `${username}.github.io`);
 
-  // orden: primero "pinned", luego por estrellas y activity
-  const byName = Object.fromEntries(repos.map(r => [r.name, r]));
-  const pinnedRepos = pinned.map(n => byName[n]).filter(Boolean);
-  const others = repos
-    .filter(r => !pinned.includes(r.name))
-    .sort((a,b) =>
+    // Orden: estrellas desc y luego updated_at desc
+    repos.sort((a,b) =>
       (b.stargazers_count - a.stargazers_count) ||
-      (new Date(b.pushed_at) - new Date(a.pushed_at)));
+      (new Date(b.updated_at) - new Date(a.updated_at))
+    );
 
-  const finalList = [...pinnedRepos, ...others].slice(0, max);
+    const finalList = repos.slice(0, max);
+    const colors = {'Python':'#3572A5','Jupyter Notebook':'#DA5B0B','JavaScript':'#f1e05a',
+      'TypeScript':'#3178c6','HTML':'#e34c26','CSS':'#563d7c','Ruby':'#701516',
+      'Shell':'#89e051','R':'#198CE7','C':'#555','#C++':'#f34b7d','TeX':'#3D6117'};
 
-  const colors = {
-    'Python':'#3572A5','Jupyter Notebook':'#DA5B0B','JavaScript':'#f1e05a',
-    'TypeScript':'#3178c6','HTML':'#e34c26','CSS':'#563d7c','Ruby':'#701516',
-    'Shell':'#89e051','R':'#198CE7','C':'#555','#C++':'#f34b7d','TeX':'#3D6117'
-  };
+    const grid = document.createElement('div');
+    grid.className = 'gh-grid';
 
-  const grid = document.createElement('div');
-  grid.className = 'gh-grid';
+    finalList.forEach(r => {
+      const lang = r.language || '—';
+      const color = colors[lang] || '#999';
+      const desc = (r.description || '').slice(0, 160);
 
-  finalList.forEach(r => {
-    const lang = r.language || '—';
-    const color = colors[lang] || '#999';
-    const desc = (r.description || '').slice(0, 140);
+      const card = document.createElement('article');
+      card.className = 'gh-card';
+      card.innerHTML = `
+        <h3 class="gh-title">
+          <a href="${r.html_url}" target="_blank" rel="noopener noreferrer">${r.name}</a>
+        </h3>
+        <p class="gh-desc">${desc}</p>
+        <div class="gh-meta">
+          <span class="gh-lang"><span class="gh-lang-dot" style="background:${color}"></span>${lang}</span>
+          <span title="Stars">★ ${r.stargazers_count}</span>
+          <span title="Forks">⑂ ${r.forks_count}</span>
+          <span style="margin-left:auto">Updated ${new Date(r.updated_at).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})}</span>
+        </div>`;
+      grid.appendChild(card);
+    });
 
-    const card = document.createElement('article');
-    card.className = 'gh-card';
-    card.innerHTML = `
-      <h3 class="gh-title">
-        <a href="${r.html_url}" target="_blank" rel="noopener noreferrer">${r.name}</a>
-      </h3>
-      <p class="gh-desc">${desc}</p>
-      <div class="gh-meta">
-        <span class="gh-lang"><span class="gh-lang-dot" style="background:${color}"></span>${lang}</span>
-        <span title="Stars">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 .25l2.39 4.84 5.34.78-3.86 3.76.91 5.31L8 12.35 3.22 14.86l.91-5.31L.27 5.87l5.34-.78L8 .25z"/></svg>
-          ${r.stargazers_count}
-        </span>
-        <span title="Forks">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.25a2.25 2.25 0 10-1.5 2.122V6.5c0 .966.784 1.75 1.75 1.75h2.5c.966 0 1.75-.784 1.75-1.75V5.372A2.25 2.25 0 1010.5 3.25v2.122c0 1.518-1.232 2.75-2.75 2.75H5.25A2.75 2.75 0 012.5 5.372V5.372A2.25 2.25 0 105 3.25z"/></svg>
-          ${r.forks_count}
-        </span>
-        <span style="margin-left:auto">Updated ${new Date(r.updated_at).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})}</span>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
-
-  wrap.appendChild(grid);
+    wrap.appendChild(grid);
+  } catch (e) {
+    wrap.innerHTML = `<p>No pude cargar los repos ahora. Intenta recargar.</p>`;
+  }
 })();
 </script>

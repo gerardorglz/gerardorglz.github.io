@@ -13,4 +13,4 @@ I am currently working on my undergraduate thesis under the supervision of PhD J
 
 I love music production and listening to music, especially R&B and Hip-Hop. I’m also really into sports like soccer, football, basketball, and padel. I'm the proud dad of Spike, a Rat Terrier who loves pizza and chicken. I enjoy understanding how things work—especially the universe.
 
-{% include gh-repo-cards.html username="gerardorglz" count=8 pinned="econ-notebooks,banxico-tools" %}
+{% include gh-repo-cards.html username="gerardorglz" count=8 %}
