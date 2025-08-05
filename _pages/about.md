@@ -15,4 +15,4 @@ I love music production and listening to music, especially R&B and Hip-Hop. I’
 
 {% include gh-repo-cards-manual.html
    username="gerardorglz"
-   repos="econ-notebooks, banxico-tools, benjov/Series-Tiempo" %}
+   repos="benjov/Series-Tiempo" %}
