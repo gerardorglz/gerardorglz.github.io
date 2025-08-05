@@ -13,16 +13,17 @@ title                    : "Home"
 title_separator          : "-"
 name                     : &name "Gerardo Ruiz"
 description              : &description "personal description"
-url                      : https://gerardorglz.github.io/gerardoruizg/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+url                      : https://gerardorglz.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "gerardorglz/gerardoruizg"
+repository               : "gerardorglz.github.io" # the name of your repository, e.g. "gerardorglz.github.io" or "gerardorglz.github.io/your-repo-name"
+copyright                : "© 2024 Gerardo Ruiz" # Copyright text, e.g.
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "IMG_3434.jpg"
+  avatar           : "IMG_3165.jpg"
   name             : "Gerardo Ruiz"
   pronouns         : "He/him"  
   bio              : "Hey there! I'm Gerardo Ruiz, a ninth-semester Economics student at UNAM, currently working as a Research Assistant at IIEc-UNAM under PhD Monika Meireles."
