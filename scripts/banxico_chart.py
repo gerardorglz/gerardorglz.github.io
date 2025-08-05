@@ -50,7 +50,7 @@ df_infl = fetch_series(SERIE_INFL, FECHA_INI, FECHA_FIN)
 df = pd.merge(df_infl, df_tasa, on="Date", how="inner").sort_values("Date").reset_index(drop=True)
 
 # --- Animación GIF (30 s) ---
-DURATION_S = 30
+DURATION_S = 10
 FPS = 20                    # 20 fps → 600 frames (tamaño razonable para GIF)
 TOTAL_FRAMES = DURATION_S * FPS
 
