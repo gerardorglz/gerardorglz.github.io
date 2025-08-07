@@ -3,7 +3,7 @@ title: "Kaleckian echoes in Tavares: capitalist dynamics, unbalanced growth, and
 collection: publications
 category: manuscripts
 permalink: /publications/2009-10-01-paper-title-number-1
-#date: 2025-01-01
+date: 2025-01-01
 venue: 'Forthcoming. Monika Meireles, Felipe da Cruz Nogueira & Gerardo Ruiz'
 paperurl: 'http://gerardorglz.github.io/files/Kalecki_Tavares.pdf'
 citation: ''
