@@ -83,8 +83,8 @@ publication_category:
     title: 'Books'
   manuscripts:
     title: 'Journal Articles'
-  racontributions:
-    title: 'RA Contributions'
+#  racontributions:
+#    title: 'RA Contributions'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
