@@ -1,0 +1,19 @@
+/* Solo afecta a esta página gracias a .quote-page */
+.quote-page h1.page__title {
+  font-style: italic;        /* cursiva */
+  font-weight: 400;          /* quita la negrita del h1 */
+  line-height: 1.4;
+
+  /* Caja blanca con sombra suave */
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: .4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+  margin-top: 0;             /* opcional: alinear con la cabecera */
+}
+
+/* Opcional: separa la firma de la cita */
+.quote-page h1.page__title br {
+  display: block;
+  margin-top: .5rem;
+}
